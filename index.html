@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Luqenov Fedora Repository</title>
+<style>
+body {
+    font-family: monospace;
+    line-height: 1.8;
+    padding: 2rem;
+    color: #222;
+    background: #fff;
+    max-width: 900px;
+    margin: 0 auto;
+}
+pre {
+    margin: 0.5rem 0 1.5rem;
+    white-space: pre-wrap;
+}
+a { color: inherit; }
+input {
+    font-family: monospace;
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid #888;
+    background: inherit;
+    color: inherit;
+    outline: none;
+    width: 30ch;
+}
+.pkg { display: block; margin: 0.3rem 0; }
+.pkg.hidden { display: none; }
+.pkg a { text-decoration: none; }
+.pkg a:hover { text-decoration: underline; }
+
+@media (prefers-color-scheme: dark) {
+    body { color: #ddd; background: #111; }
+    input { border-color: #555; }
+}
+</style>
+</head>
+<body>
+<pre>
+Luqenov Fedora Repository
+=========================
+A third-party RPM binary package repository for Fedora.
+
+Setup:
+  sudo dnf copr enable luqenov/bun
+  sudo dnf copr enable luqenov/equibop-dev
+  sudo dnf copr enable luqenov/electron35
+
+Install a package:
+  sudo dnf install bun
+  sudo dnf install equibop-dev
+  sudo dnf install electron35
+
+Updates come through normally with:
+  sudo dnf upgrade
+
+Packages:
+<input type="text" id="search" placeholder="search package..." autocomplete="off" />
+
+<span id="pkglist"></span>
+</pre>
+
+<script>
+const packages = [
+    { name: "bun", version: "latest", arch: "x86_64", link: "https://copr.fedorainfracloud.org/coprs/luqenov/bun/" },
+    { name: "equibop-dev", version: "latest", arch: "x86_64", link: "https://copr.fedorainfracloud.org/coprs/luqenov/equibop-dev/" },
+    { name: "electron35", version: "latest", arch: "x86_64", link: "https://copr.fedorainfracloud.org/coprs/luqenov/electron35/" }
+];
+
+const pkglist = document.getElementById("pkglist");
+
+function renderPackages(filtered) {
+    pkglist.innerHTML = "";
+    filtered.forEach(pkg => {
+        const div = document.createElement("div");
+        div.className = "pkg";
+        div.innerHTML = `<a href="${pkg.link}" target="_blank">${pkg.name} (${pkg.arch})</a>`;
+        pkglist.appendChild(div);
+    });
+}
+
+renderPackages(packages);
+
+document.getElementById("search").addEventListener("input", function () {
+    const q = this.value.toLowerCase().trim();
+    if (!q) {
+        renderPackages(packages);
+        return;
+    }
+    const filtered = packages.filter(pkg => 
+        pkg.name.toLowerCase().includes(q)
+    );
+    renderPackages(filtered);
+});
+</script>
+</body>
+</html>
