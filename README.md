@@ -1,4 +1,4 @@
-# rpm-repository
+# Fedora Repository
 
 A third-party RPM binary package repository.
 
