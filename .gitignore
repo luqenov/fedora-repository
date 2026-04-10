@@ -1,0 +1,16 @@
+rpmbuild/BUILD/
+rpmbuild/BUILDROOT/
+rpmbuild/RPMS/
+rpmbuild/SRPMS/
+rpmbuild/SOURCES/*.zip      
+rpmbuild/SOURCES/*.tar.gz 
+
+*.zip
+*.tar.gz
+*.tar.xz
+*.rpm
+*.src.rpm
+
+*.swp
+*~
+.DS_Store
