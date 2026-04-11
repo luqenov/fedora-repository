@@ -50,11 +50,13 @@ Setup:
   sudo dnf copr enable luqenov/bun
   sudo dnf copr enable luqenov/equibop-dev
   sudo dnf copr enable luqenov/electron35
+  sudo dnf copr enable luqenov/helium
 
 Install a package:
   sudo dnf install bun
   sudo dnf install equibop-dev
   sudo dnf install electron35
+  sudo dnf install helium
 
 Updates come through normally with:
   sudo dnf upgrade
@@ -69,7 +71,8 @@ Packages:
 const packages = [
     { name: "bun", version: "latest", arch: "x86_64", link: "https://copr.fedorainfracloud.org/coprs/luqenov/bun/" },
     { name: "equibop-dev", version: "latest", arch: "x86_64", link: "https://copr.fedorainfracloud.org/coprs/luqenov/equibop-dev/" },
-    { name: "electron35", version: "latest", arch: "x86_64", link: "https://copr.fedorainfracloud.org/coprs/luqenov/electron35/" }
+    { name: "electron35", version: "latest", arch: "x86_64", link: "https://copr.fedorainfracloud.org/coprs/luqenov/electron35/" },
+    { name: "helium", version: "latest", arch: "x86_64", link: "https://copr.fedorainfracloud.org/coprs/luqenov/helium/" }
 ];
 
 const pkglist = document.getElementById("pkglist");
