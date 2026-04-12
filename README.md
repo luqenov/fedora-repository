@@ -5,7 +5,7 @@ A third-party RPM binary package repository.
 ## Setup
 
 > [!NOTE]
-> You can find all packages [here](https://copr.fedorainfracloud.org/coprs/luqenov/)
+> You can find all packages [here](https://luqenov.github.io/fedora-repository/)
 
 Add the repo:
 
