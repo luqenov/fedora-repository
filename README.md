@@ -22,5 +22,5 @@ sudo dnf install <package>
 Updates come through normally with:
 
 ```sh
-sudo dnf upgrade -y
+sudo dnf update --refresh
 ```
