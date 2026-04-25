@@ -1,5 +1,5 @@
 Name:           helium
-Version:        0.10.9.1
+Version:        0.11.3.2
 Release:        1%{?dist}
 Summary:        Private, fast, and honest web browser
 
@@ -61,5 +61,11 @@ install -Dm644 helium-extracted/usr/share/icons/hicolor/256x256/apps/helium.png 
 /usr/share/icons/hicolor/256x256/apps/helium.png
 
 %changelog
+* Tue Apr 14 2026 luqenov <luqenov@tutamail.com> - 0.11.2.1
+- Update to 0.11.2.1
+
+* Sun Apr 12 2026 luqenov <luqenov@tutamail.com> - 0.11.1.1-1
+- Update to 0.11.1.1
+
 * Sat Apr 11 2026 luqenov <luqenov@tutamail.com> - 0.10.9.1-1
 - Initial RPM package of Helium browser
