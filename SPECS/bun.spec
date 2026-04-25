@@ -1,5 +1,5 @@
 Name:           bun
-Version:        1.3.11
+Version:        1.3.13
 Release:        1%{?dist}
 Summary:        JavaScript runtime, bundler, test runner and package manager
 
@@ -33,5 +33,8 @@ install -Dm755 bun-bin/bun-linux-x64/bun %{buildroot}/usr/bin/bun
 /usr/bin/bun
 
 %changelog
+* Sun Apr 12 2026 luqenov <luqenov@tutamail.com> - 1.3.12-1
+- Update to 1.3.12
+
 * Fri Apr 10 2026 luqenov <luqenov@tutamail.com> - 1.3.11-1
 - Initial RPM package of Bun

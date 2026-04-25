@@ -1,9 +1,9 @@
 Name:           equibop-dev
-Version:        0.0.0.20260407
+Version:        0.0.0.20260422
 Release:        1%{?dist}
 Summary:        Custom Discord App (dev branch)
 
-%global _gitcommit b8d7a11614648dd752fe0289c5fba247f2d8c235
+%global _gitcommit 85ff3b5b0a2d37421ec0eb7de956e05e11dea233
 %global _electronver 35
 %global __strip /bin/true
 %global _builddir_name Equibop-%{_gitcommit}
@@ -87,5 +87,8 @@ install -Dm644 build/icon.svg \
 /usr/share/icons/hicolor/scalable/apps/equibop.svg
 
 %changelog
+* Wed Apr 22 2026 luqenov <luqenov@tutamail.com> - 0.0.0.20260422-1
+- Update git commit and version
+
 * Tue Apr 07 2026 luqenov <luqenov@tutamail.com> - 0.0.0.20260407-1
 - Initial RPM package (ported from Void Linux template)
